@@ -11,7 +11,7 @@ link: https://ogmmateryal.eba.gov.tr/api/uc-adim-konu-listele/kategoriler
 OUTPUT:
 [true,true,true]
 ````
-usage: https://ogmmateryal.eba.gov.tr/api/uc-adim-ders-listele/{sınav adı}
+usage: `https://ogmmateryal.eba.gov.tr/api/uc-adim-ders-listele/{sınav adı}`
 
 link: https://ogmmateryal.eba.gov.tr/api/uc-adim-ders-listele/AYT
 ````
@@ -124,7 +124,7 @@ OUTPUT:
 ]
 ````
 
-usage: https://ogmmateryal.eba.gov.tr/api/uc-adim-konu-listele/{ders-id}-{sinav-adi}
+usage: `https://ogmmateryal.eba.gov.tr/api/uc-adim-konu-listele/{ders-id}-{sinav-adi}`
 
 link: https://ogmmateryal.eba.gov.tr/api/uc-adim-konu-listele/6-TYT
 ````
@@ -313,7 +313,7 @@ OUTPUT:
 ]
 ````
 
-usage: https://ogmmateryal.eba.gov.tr/api/uc-adim-soru-listele?kategori={sinav-adi - (TYT,AYT,YDT)}&konu={konu-id}&adim={test-sayisi (1-2-3)}
+usage: `https://ogmmateryal.eba.gov.tr/api/uc-adim-soru-listele?kategori={sinav-adi - (TYT,AYT,YDT)}&konu={konu-id}&adim={test-sayisi (1-2-3)}`
 
 link: https://ogmmateryal.eba.gov.tr/api/uc-adim-soru-listele?kategori=TYT&konu=955&adim=1
 ````
@@ -466,6 +466,6 @@ OUTPUT:
 ]
 ````
 
-usage: https://ogmmateryal.eba.gov.tr/panel/upload/ucadim/{dosya}
+usage: `https://ogmmateryal.eba.gov.tr/panel/upload/ucadim/{dosya}`
 
 output: raw mp4
