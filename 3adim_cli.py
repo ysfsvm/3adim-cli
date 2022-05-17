@@ -2,15 +2,16 @@
 #----------------------------------------------------------------------------
 # Created By  : github/ysfsvm
 # Created Date: 15/05/2022
-# version = 0.9
+# version = 0.9.1
 # license = GNU GPL v3
 #----------------------------------------------------------------------------
 
+import os
+import time
 import requests
 from pathlib import Path
 from urllib.parse import urlparse
 import urllib.request
-import os
 
 baseUrl = 'https://ogmmateryal.eba.gov.tr/' 
 soruliste_url = 'https://ogmmateryal.eba.gov.tr/api/uc-adim-soru-listele'
@@ -19,8 +20,10 @@ soruliste = urlparse(soruliste_url)
 
 # Bruh wincort
 if os.name == 'nt':
+    cortmode = 1
     folders = "\\"
 else:
+    cortmode = 0
     folders = "/"
 
 def downloadfile(url, name):
@@ -28,9 +31,11 @@ def downloadfile(url, name):
 
 def downloadQuestions():
         global dirname
-        dirname = str(konuAdi) + " - " + str(adim) + ".adım"
+        if cortmode: dirname = os.environ['USERPROFILE'] + "\\Videos\\" + str(konuAdi) + " - " + str(adim) + ".adım Soruları"
+        else: dirname = str(os.getcwd()) + "/" + str(konuAdi) + " - " + str(adim) + ".adım Soruları"
+
         Path(dirname).mkdir(parents=True, exist_ok=True)
-        downloadfile(soru_link , "./" + dirname + "/" + "soru-" + str(i + 1) + ".mp4")
+        downloadfile(soru_link , dirname + "/" + "soru-" + str(i + 1) + ".mp4")
         print("soru-" + str(i + 1) + ".mp4" + " başarı ile indirildi!")
 
 def wrongAnswer():
@@ -96,7 +101,13 @@ down = askDownload()
 
 for i in range(len(soruliste_json)):
         soru_dosya = soruliste_json[i]["dosya"]
-        soru_link = base._replace(path="/panel/upload/ucadim/" + soru_dosya).geturl()
+        soru_link = base._replace(path="panel/upload/ucadim/" + soru_dosya).geturl()
         if down: downloadQuestions()
-        else: print("soru" + str(i + 1), "-", soru_link)
-if down: print("\nTest klasörünün konumu: " + str(Path.cwd()) + folders + dirname)
+        else: print("soru-" + str(i + 1), "-", soru_link)
+if down: print("\nTest klasörünün konumu: " + dirname )
+print("\nÇıkmak için CTRL + C")
+try:
+    while True:
+        time.sleep(1)
+except KeyboardInterrupt:
+    pass
