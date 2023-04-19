@@ -3,7 +3,7 @@ This repository provides an unofficial API for accessing the solution videos of 
 
 Usage: `python 3adim_cli.py`
 
-For API usage, refer to /api_usage.md
+For API usage, refer to `/api_usage.md`
 
 Please note that this CLI is unofficial and may not be officially supported or maintained by OGM Materyal. Use it at your own risk.
 
