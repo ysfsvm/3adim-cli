@@ -1,0 +1,12 @@
+{
+  "invalid_value": "Please enter a valid value!",
+  "select_exam": "Select an exam:\n1. TYT\n2. AYT\n3. YDT\nYour choice: ",
+  "select_subject": "Your choice: ",
+  "download_success": "{} downloaded successfully!",
+  "download_failure": "Failed to download {}",
+  "file_already_exists": "{} already exists. Skipping...",
+  "test_folder_location": "{} - Test folder location: {}",
+  "exit_instructions": "Press CTRL + C to exit",
+  "step_folder": "Step {} Questions",
+  "question_file": "question_{}.mp4"
+}
