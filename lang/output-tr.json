@@ -1,0 +1,12 @@
+{
+  "invalid_value": "Lütfen geçerli bir değer girin!",
+  "select_exam": "Bir sınav seçin:\n1. TYT\n2. AYT\n3. YDT\nSeçiminiz: ",
+  "select_subject": "Seçiminiz: ",
+  "download_success": "{} başarıyla indirildi!",
+  "download_failure": "{} indirilemedi",
+  "file_already_exists": "{} zaten mevcut. Atla...",
+  "test_folder_location": "{} - Test klasörü konumu: {}",
+  "exit_instructions": "Çıkmak için CTRL + C tuşlarına basın",
+  "step_folder": "{}.adım Soruları",
+  "question_file": "soru_{}.mp4"
+}
